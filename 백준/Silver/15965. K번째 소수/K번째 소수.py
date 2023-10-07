@@ -1,15 +1,17 @@
 import math
-halfRange = round(math.sqrt(500000))
+
 sosoo = []
+num = 10 ** 7
+halfNum = round(math.sqrt(num))
 
 K = int(input())
 
-lst = [0 for _ in range(500000)]
+lst = [0 for _ in range(num)]
 lst[0] = lst[1] = 1
 
-for i in range(2, halfRange):
+for i in range(2, halfNum):
     if lst[i] == 0:
-        for j in range(i*2, 500000, i):
+        for j in range(i*2, num, i):
             lst[j] = 1
 
 for n in range(len(lst)):
