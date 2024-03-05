@@ -1,0 +1,8 @@
+-- outs 테이블이 null인, ins 테이블의 datetime을 오름차순 했을 때 상위 3개
+-- 이름과 보호 시작일 조회
+-- 보호 시작일 순으로 정렬
+SELECT I.NAME, I.DATETIME
+FROM ANIMAL_INS AS I LEFT JOIN ANIMAL_OUTS AS O USING(ANIMAL_ID)
+WHERE I.ANIMAL_ID IS NOT NULL AND O.ANIMAL_ID IS NULL
+ORDER BY I.DATETIME
+LIMIT 3
