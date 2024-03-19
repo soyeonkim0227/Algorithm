@@ -1,5 +1,6 @@
 def solution(x):
-    cnt = 0
+    res = 0
     for s in str(x):
-        cnt += int(s)
-    return True if x % cnt == 0 else False
+        res += int(s)
+    return True if x % res == 0 else False
+    
